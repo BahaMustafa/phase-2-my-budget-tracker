@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BahaMustafa/phase-2-my-budget-tracker/static/css/main.cd6747d5.css",
+    "main.js": "/BahaMustafa/phase-2-my-budget-tracker/static/js/main.186d7b27.js",
+    "static/js/787.0bed2150.chunk.js": "/BahaMustafa/phase-2-my-budget-tracker/static/js/787.0bed2150.chunk.js",
+    "index.html": "/BahaMustafa/phase-2-my-budget-tracker/index.html",
+    "main.cd6747d5.css.map": "/BahaMustafa/phase-2-my-budget-tracker/static/css/main.cd6747d5.css.map",
+    "main.186d7b27.js.map": "/BahaMustafa/phase-2-my-budget-tracker/static/js/main.186d7b27.js.map",
+    "787.0bed2150.chunk.js.map": "/BahaMustafa/phase-2-my-budget-tracker/static/js/787.0bed2150.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd6747d5.css",
+    "static/js/main.186d7b27.js"
+  ]
+}
