@@ -7,7 +7,7 @@ function Navbar() {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/add">Add Expense</Link>
-      {/* Add more links as needed */}
+    
     </nav>
   );
 }

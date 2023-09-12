@@ -11,7 +11,7 @@ function ExpenseList() {
       .then(response => response.json())
       .then(data => setExpenses(data))
       .catch(error => console.error('Error fetching expenses:', error));
-  }, []); // Empty dependency array ensures this runs once when the component mounts
+  }, []);
 
   return (
     <div className="expense-list">
