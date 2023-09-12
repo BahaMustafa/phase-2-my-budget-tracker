@@ -1,0 +1,3 @@
+[submodule "my-backend"]
+    path = my-backend
+    url = https://github.com/BahaMustafa/phase2backend
