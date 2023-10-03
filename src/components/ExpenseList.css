@@ -1,17 +1,25 @@
-.expense-detail {
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-  }
-  
-  .expense-detail h2 {
-    margin-top: 0;
-    color: #333;
-    font-size: 24px;
-  }
-  
-  .expense-detail p {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
+.expense-list {
+  max-width: 800px;
+  margin: auto;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.expense-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.expense-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expense-list li {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
