@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AddExpenseForm.css';
 
 function AddExpenseForm() {
@@ -7,6 +8,8 @@ function AddExpenseForm() {
     amount: 0,
     date: '',
   });
+
+  const navigate = useNavigate(); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,24 +21,23 @@ function AddExpenseForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     fetch('http://localhost:5000/expenses', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Expense added:', data);
-      
-    })
-    .catch(error => {
-      console.error('Error adding expense:', error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Expense added:', data);
+        navigate('/');  
+      })
+      .catch((error) => {
+        console.error('Error adding expense:', error);
+      });
   };
-  
 
   return (
     <form className="add-expense-form" onSubmit={handleSubmit}>
