@@ -23,3 +23,16 @@
   margin-bottom: 10px;
   border-radius: 5px;
 }
+button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
