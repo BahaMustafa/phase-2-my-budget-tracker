@@ -1,4 +1,5 @@
 import React from 'react';
+import './ExpenseCategories.css';
 
 function ExpenseCategories() {
   const categories = ['Food', 'Transport', 'Entertainment', 'Others']; 
