@@ -36,3 +36,17 @@ button {
 button:hover {
   background-color: darkred;
 }
+.expense-list p.total {
+  font-size: 1.2em;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.expense-list p.total span.amount {
+  font-weight: bold;
+  color: #e44d26;
+}
