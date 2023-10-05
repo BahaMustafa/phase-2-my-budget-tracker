@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddExpenseForm.css';
 
-function AddExpenseForm() {
+function AddExpenseForm({ addExpense }) {
   const [formData, setFormData] = useState({
     description: '',
     amount: 0,
     date: '',
+    category: 'Food', 
+    category: '',
   });
 
   const navigate = useNavigate(); 
@@ -29,14 +31,19 @@ function AddExpenseForm() {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Expense added:', data);
-        navigate('/');  
-      })
-      .catch((error) => {
-        console.error('Error adding expense:', error);
-      });
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Expense added:', data);
+      if (typeof addExpense === 'function') {  
+        addExpense(data);  
+      } else {
+        console.error('addExpense is not a function', addExpense);  
+      }
+      navigate('/');  
+    })
+    .catch((error) => {
+      console.error('Error adding expense:', error);
+    });
   };
 
   return (
@@ -73,6 +80,21 @@ function AddExpenseForm() {
           onChange={handleInputChange}
           required
         />
+      </div>
+
+      <div>
+        <label>Category:</label>
+        <select 
+          name="category" 
+          value={formData.category} 
+          onChange={handleInputChange}
+        >
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Others">Others</option>
+        
+        </select>
       </div>
 
       <button type="submit">Add Expense</button>
