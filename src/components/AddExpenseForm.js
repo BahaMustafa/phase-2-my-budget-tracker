@@ -8,7 +8,6 @@ function AddExpenseForm({ addExpense }) {
     amount: 0,
     date: '',
     category: 'Food', 
-    category: '',
   });
 
   const navigate = useNavigate(); 
