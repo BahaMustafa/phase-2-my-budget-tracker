@@ -32,6 +32,7 @@ function ExpenseCategories() {
           </ul>
         </div>
       ))}
+      <p>Total:</p>
     </div>
   );
 }
