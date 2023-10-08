@@ -91,6 +91,7 @@ function AddExpenseForm({ addExpense }) {
           <option value="Food">Food</option>
           <option value="Transport">Transport</option>
           <option value="Entertainment">Entertainment</option>
+          <option value="Housing/Rent">Housing/Rent</option>
           <option value="Others">Others</option>
         
         </select>

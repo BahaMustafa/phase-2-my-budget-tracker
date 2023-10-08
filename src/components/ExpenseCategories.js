@@ -17,7 +17,7 @@ function ExpenseCategories() {
 
   const getExpensesByCategory = (category) => {
     return expenses.filter(expense => expense.category === category).map(expense => (
-      <li key={expense.id}>{expense.name}: ${expense.amount}</li>
+      <li key={expense.id}>{expense.name}${expense.amount}</li>
     ));
   };
 
