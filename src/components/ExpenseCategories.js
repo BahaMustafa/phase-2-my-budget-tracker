@@ -17,9 +17,11 @@ function ExpenseCategories() {
 
   const getExpensesByCategory = (category) => {
     return expenses.filter(expense => expense.category === category).map(expense => (
-      <li key={expense.id}>{expense.name}${expense.amount}</li>
+      <li key={expense.id}>{expense.name}: ${expense.amount}</li>
     ));
   };
+
+  const totalExpenses = expenses.reduce((total, expense) => total + parseFloat(expense.amount), 0);
 
   return (
     <div>
@@ -32,7 +34,7 @@ function ExpenseCategories() {
           </ul>
         </div>
       ))}
-      <p>Total:</p>
+      <p>Total: ${totalExpenses.toFixed(2)}</p>
     </div>
   );
 }
